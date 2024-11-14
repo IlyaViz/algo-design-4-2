@@ -10,8 +10,8 @@ class ANT:
     M = 30
     INIT_PHEROMONE = 0.1
     MIN_PHEROMONE = INIT_PHEROMONE/1000
-    ITERS = 250
-
+    ITERS = 10
+    
     def __init__(self, graph: Graph) -> None:
         self.graph = graph
         self.cities = len(graph.nodes)

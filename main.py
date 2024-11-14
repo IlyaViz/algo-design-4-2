@@ -26,10 +26,10 @@ if __name__ == "__main__":
     distance = problem.best_distance
 
     for edge in cities.edges(data=True):
-        print(f"Distance from {edge[0]} to {edge[1]} is ({edge[2]['length']})")
+        print(f"Distance from {edge[0]} to {edge[1]} is {edge[2]['length']}")
     
     print(f"\nSOLUTION (min distance = {distance})")
     print(f"Start with {path[0]}")
 
     for index in range(len(path)-1):
-        print(f"Go from {path[index]} to {path[index+1]}, distance is ({cities[path[index]][path[index+1]]['length']})")
+        print(f"Go from {path[index]} to {path[index+1]}, distance is {cities[path[index]][path[index+1]]['length']}")
