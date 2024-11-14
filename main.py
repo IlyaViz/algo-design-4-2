@@ -14,7 +14,7 @@ def generate_cities():
 
     for x in range(CITIES):
         for y in range(x+1, CITIES):
-                graph.add_edge(x, y, length=random.randint(MIN_DISTANCE, MAX_DISTANCE))
+            graph.add_edge(x, y, length=random.randint(MIN_DISTANCE, MAX_DISTANCE))
 
     return graph
 

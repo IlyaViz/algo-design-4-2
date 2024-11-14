@@ -103,7 +103,7 @@ class ANT:
         return numerator / denominator
     
     def greedy_value(self):
-        distance = 0
+        total_distance = 0
         cities = list(self.graph.nodes)
         current_city = cities[0]
         visited = [current_city]
@@ -126,11 +126,11 @@ class ANT:
             if next_city is None:
                 break
 
-            distance += min_distance
+            total_distance += min_distance
             current_city = next_city
 
             visited.append(current_city)
 
-        distance += self.graph[current_city][visited[0]]["length"]
+        total_distance += self.graph[current_city][visited[0]]["length"]
 
-        return distance
+        return total_distance
