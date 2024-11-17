@@ -63,7 +63,7 @@ class ANT:
     
     def get_best_current(self):
         ant_distances = self.current_distances.items()
-        best_ant_distance = max(ant_distances, key = lambda ant_distance: ant_distance[1])
+        best_ant_distance = min(ant_distances, key = lambda ant_distance: ant_distance[1])
 
         best_ant = best_ant_distance[0]
         best_distance = best_ant_distance[1]
